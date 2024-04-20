@@ -1,4 +1,4 @@
-# Simple-Weather-Website
+# Simple Weather Website/App
  A simple weather website made using HTML, JS and CSS and WeatherAPI.com
 
  To use this website you will need to make a account at WeatherAPI.com and get an API key, you then need to add the API key in the weatherscript.js file.
