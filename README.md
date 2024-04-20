@@ -5,6 +5,8 @@
 
  You can add more cities in the "weatherapp.html" file if needed, it will be marked as a comment in the actual file.
 
+ <a href="https://yghazala.com/weatherapp"> Here is a Preview of the Website. </a>
+
  Enjoy :)
 
 
