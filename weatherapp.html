@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="weatherstyle.css">
+</head>
+<body style="background-image: url('weathermedia/back.png'); background-size: cover; background-repeat: no-repeat; background-position: center;"></body>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Weather App</h1>
+            <select id="city-select">
+                <option value="Dubai">Dubai</option>
+                <option value="New York">New York</option>
+                <option value="London">London</option>
+                <option value="Berlin">Berlin</option>
+                <option value="Vienna">Vienna</option>
+                <option value="Cairo">Cairo</option>
+                <option value="Tripoli">Tripoli</option>
+                <option value="Alexandria">Alexandria</option>
+                <option value="Abu Dhabi">Abu Dhabi</option>
+                <option value="Frankfurt">Frankfurt</option>
+                <!-- Add more cities as needed -->
+            </select>
+        <div class="weather-info">
+            <div class="location"></div>
+            <div class="temperature"></div>
+            <div class="description"></div>
+        </div>
+    </div>
+    <script src="weatherscript.js"></script>
+</body>
+</html>

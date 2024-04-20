@@ -1,0 +1,235 @@
+@font-face {
+    font-family: 'Satoshi Bold';
+    src: url(Satoshi/Satoshi-Bold.otf);
+}
+
+@font-face {
+    font-family: 'Satoshi Medium';
+    src: url(Satoshi/Satoshi-Medium.otf);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100vh; 
+}
+
+.content {
+    max-width: 800px; 
+    text-align: center; 
+}
+
+.light-theme {
+    --background-1: #FCFCFC;
+    --background-2: #f5f5f5;
+    --background-3: #E6E6E6;
+    --background-transparent-1: rgba(241, 241, 241, 0.5);
+    --background-transparent-2: rgba(241, 241, 241, 0.7);
+    --foreground-1: #0f0f0f;
+    --foreground-2: #141414;
+    --foreground-3: #b4b4b4;
+    --text-shadow: rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme {
+    --background-1: #111111;
+    --background-2: #262e57;
+    --background-3: #191919;
+    --background-transparent-1: rgba(14, 14, 14, 0.5);
+    --background-transparent-2: rgba(14, 14, 14, 0.7);
+    --foreground-1: #f0f0f0;
+    --foreground-2: #acacac;
+    --foreground-3: #505050;
+    --text-shadow: rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*:not(body, html, .text) {
+    animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Satoshi Medium', sans-serif;
+    font-size: 20px;
+    line-height: 150%;
+    background: var(--background-1);
+    color: var(--foreground-1);
+    transition: 120ms ease-out;
+}
+
+h1 {
+    font-family: 'Satoshi Bold', sans-serif;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+h2 {
+    font-family: 'Satoshi Bold', sans-serif;
+    font-size: 24px;
+    line-height: 150%;
+    display: flex;
+    width: fit-content;
+}
+
+h2:hover .t::after {
+    content: 'oo';
+    margin-right: 4px;
+}
+
+h2:hover .l::after {
+    content: 'ong';
+}
+
+h2:hover .semi::after {
+    content: "";
+    margin-right: 4px;
+}
+
+h2:hover .d::after {
+    content: "idn't";
+    margin-right: 4px;
+}
+
+h2:hover .r::after {
+    content: 'ead';
+}
+
+p {
+    color: var(--foreground-2);
+}
+
+li {
+    margin-left: 18px;
+    color: var(--foreground-2);
+}
+
+a {
+    text-decoration: none;
+    transition: 120ms ease-out;
+    border-bottom: 1.5px solid var(--foreground-3);
+    padding-bottom: 1px;
+    color: var(--foreground-1);
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    position: relative;
+    top: 0;
+}
+
+a:hover:not(.wrapper) {
+    text-decoration-color: var(--foreground-1);
+    border-color: var(--foreground-1);
+    top: -2px;
+    filter: drop-shadow(0 8px 4px var(--text-shadow));
+}
+
+a:active:not(.wrapper) {
+    top: -1px;
+}
+
+a > svg {
+    transition: 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.5);
+    stroke: var(--foreground-1);
+    width: 22px;
+    height: 22px;
+}
+
+a:hover > svg:not(.dont) {
+    transform: translate(4px, -4px);
+}
+
+a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--foreground-1);
+    outline-offset: 4px;
+    border-radius: 0 !important;
+}
+
+button {
+    background: none;
+    padding: 4px;
+    border-radius: 4px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    transition: ease-out 120ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background: var(--background-2);
+}
+
+button:active {
+    background: var(--background-3);
+}
+
+main {
+    max-width: 600px;
+    margin: 64px auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 24px;
+}
+
+main > img {
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    opacity: 1 !important;
+    transition: 0.2s ease-out;
+}
+
+img:hover {
+    animation: jiggle 0.3s infinite;
+    filter: drop-shadow(0 8px 4px var(--text-shadow));
+}
+
+@keyframes jiggle {
+    0% { transform:  rotate(0deg) translate(1px, 1px) }
+    20% { transform: rotate(-0.5deg) translate(-1px, -2px) }
+    40% { transform: rotate(0deg) translate(-3px, 0px); }
+    60% { transform: rotate(0.5deg) translate(3px, 2px); }
+    80% { transform: rotate(0deg) translate(-1px, 2px); }
+    100% { transform: rotate(-0.5deg) translate(1px, 1px); }
+}
+
+main section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+main .about h1 span {
+    transition: 0.2s ease-out;
+    display: inline-block;
+    opacity: 1 !important;
+}
+
+main .about h1 span:hover {
+    transform: scale(1.1);
+    animation: wave 0.5s;
+    filter: drop-shadow(0 8px 4px var(--text-shadow));
+}
+
+select {
+    padding: 10px 14px; 
+    font-size: 18px;
+    border-radius: 15px; 
+    background-color: transparent; 
+    color: var(--foreground-1); 
+    border: 15px solid var; 
+}
